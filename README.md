@@ -9,13 +9,13 @@ Assistente conversacional com RAG sobre folha de pagamento, powered by Gemini + 
 - Git
 
 ### 2. Instalar dependências
-\\ash
+\\bash
 python -m venv .venv
 .venv\Scripts\Activate.ps1
 pip install -r requirements.txt
 \
 ### 3. Configurar variáveis de ambiente
-\\ash
+\\bash
 # Copie o template e preencha com suas chaves
 cp .env.example .env
 \
@@ -27,11 +27,11 @@ Variáveis opcionais (busca web):
 - GOOGLE_CSE_ID: ID do mecanismo de busca
 
 ### 4. Rodar os testes
-\\ash
+\\bash
 python -m pytest tests/ -v
 \
 ### 5. Subir a aplicação
-\\ash
+\\bash
 streamlit run streamlit_app.py
 \
 Acesse: http://localhost:8501
