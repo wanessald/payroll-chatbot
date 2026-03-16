@@ -9,16 +9,16 @@ Assistente conversacional com RAG sobre folha de pagamento, powered by Gemini + 
 - Git
 
 ### 2. Instalar dependências
-\\bash
+```bash
 python -m venv .venv
 .venv\Scripts\Activate.ps1
 pip install -r requirements.txt
-\
+```
 ### 3. Configurar variáveis de ambiente
-\\bash
+```bash
 # Copie o template e preencha com suas chaves
 cp .env.example .env
-\
+```
 Variáveis obrigatórias:
 - GEMINI_API_KEY: chave da API do Google AI Studio
 
@@ -27,17 +27,17 @@ Variáveis opcionais (busca web):
 - GOOGLE_CSE_ID: ID do mecanismo de busca
 
 ### 4. Rodar os testes
-\\bash
+```bash
 python -m pytest tests/ -v
-\
+```
 ### 5. Subir a aplicação
-\\bash
+```bash
 streamlit run streamlit_app.py
-\
+```
 Acesse: http://localhost:8501
 
 ## Arquitetura
-
+```bash
 \streamlit_app.py        -> Interface do usuário
 app/
   chat_engine.py        -> Orquestrador central
@@ -53,7 +53,7 @@ data/
   payroll.csv           -> Dataset de folha de pagamento
 tests/
   test_payroll.py       -> 33 testes automatizados
-\
+```
 ## Decisoes Tecnicas
 
 ### Por que RAG em vez de fine-tuning?
