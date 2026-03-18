@@ -58,32 +58,32 @@ tests/
 
 ### Por que RAG em vez de fine-tuning?
 Fine-tuning treina o modelo com novos dados -- caro e lento.
-RAG recupera dados relevantes em tempo real -- barato e flexivel.
+RAG recupera dados relevantes em tempo real -- barato e flexível.
 Para um dataset de folha de pagamento que muda mensalmente,
-RAG e a escolha correta.
+RAG é a escolha correta.
 
 ### Por que RAG hibrido (semantico + keyword)?
-- Com chave Gemini: embeddings semanticos toleram parafrase
-- Sem chave / em testes: filtros pandas cobrem casos principais
+- Com chave Gemini: embeddings semanticos toleram parafrase.
+- Sem chave / em testes: filtros pandas cobrem casos principais.
 O sistema funciona em ambos os cenarios.
 
 ### Por que nao LangChain?
-Dataset pequeno (12 linhas) nao justifica o overhead.
-Implementacao manual garante entendimento completo do pipeline.
+Dataset pequeno (12 linhas) não justifica o overhead.
+Implementacão manual garante entendimento completo do pipeline.
 
 ### Por que Streamlit?
-Prototipagem rapida de interfaces de dados em Python puro.
+Prototipagem rápida de interfaces de dados em Python puro.
 Sem necessidade de HTML/CSS/JavaScript.
 
 ## Limitacoes
-- Dataset sintetico com 12 registros
+- Dataset sintético com 12 registros
 - Busca web requer credenciais opcionais do Google Cloud
 - Embeddings recalculados a cada reinicio (sem cache persistente)
 - Sem autenticacao de usuario
 
 ## Testes
 33 testes automatizados cobrindo:
-- Formatacao de moeda BRL
+- Formatacão de moeda BRL
 - Parser de competencias (10 formatos)
 - RAG por nome, ID, competencia
 - Valores monetarios especificos do dataset
